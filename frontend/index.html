@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoSort AI - Smart Waste Sorting for a Cleaner Future</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">IBM SkillsBuild project</p>
+      <h1>EcoSort AI</h1>
+      <p class="tagline">Smart Waste Sorting for a Cleaner Future</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card" aria-labelledby="ask-title">
+      <h2 id="ask-title">What are you throwing away?</h2>
+      <form id="form" autocomplete="off">
+        <label for="item" class="sr-only">Waste item</label>
+        <input id="item" name="item" type="text" maxlength="100" required
+               placeholder="Type an item, for example: used plastic bottle">
+        <button id="submit" type="submit">Check item</button>
+      </form>
+      <div class="examples" aria-label="Example items">
+        <span>Try:</span>
+        <button type="button" class="chip" data-item="Used plastic bottle">Used plastic bottle</button>
+        <button type="button" class="chip" data-item="Banana peel">Banana peel</button>
+        <button type="button" class="chip" data-item="Old battery">Old battery</button>
+        <button type="button" class="chip" data-item="Greasy pizza box">Greasy pizza box</button>
+        <button type="button" class="chip" data-item="Old mobile phone">Old mobile phone</button>
+      </div>
+    </section>
+
+    <section id="result" class="card hidden" aria-live="polite"></section>
+
+    <section class="card" aria-labelledby="chart-title">
+      <h2 id="chart-title">Items checked in this session</h2>
+      <p class="muted" id="chart-empty">Check an item to see the chart.</p>
+      <div id="chart" class="chart" role="img" aria-label="Bar chart of waste types checked"></div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>EcoSort AI is a student prototype. Waste rules differ by city, so please follow your local guidelines.
+       SDG alignment is our own and is not an official endorsement by the UN or IBM.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
